@@ -95,6 +95,27 @@
 </head>
 <body >
 @include('navbar')
+<div>
+  <iframe src="https://goo.gl/maps/PbogTVQDm4UEPiNcA" frameborder="0"></iframe>
+</div>
+
+
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+
 <div class=" container-fluid row bg-light m-2" >
   {{-- This is a form 1 --}}
   <div class="col-6">
